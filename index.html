@@ -39,7 +39,7 @@
     font-size: 1.9rem;
     line-height: 1.25;
     letter-spacing: -0.02em;
-    margin: 0 0 3.5rem;
+    margin: 0 0 1.25rem;
   }
   h2 {
     font-size: 0.78rem;
@@ -54,6 +54,7 @@
   li:last-child { border-bottom: 1px solid var(--rule); }
   li h3 { font-size: 1rem; margin: 0 0 0.35rem; font-weight: 600; }
   li p { margin: 0; color: var(--muted); }
+  li p + p { margin-top: 0.75rem; }
   a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
   a:hover { opacity: 0.75; }
   .note { color: var(--muted); margin: 0 0 3.5rem; }
@@ -63,19 +64,26 @@
 <body>
 <main>
   <h1>Gebhard Technology</h1>
+  <p class="note">The hard part stopped being writing the code. It is knowing whether what you have is right, and what to do when it stops working. The model can do that most of the time. It just cannot tell you which time this is.</p>
   <h2>Services</h2>
   <ul>
     <li>
       <h3>Architecture Reviews</h3>
-      <p>An independent read on your system: where it will hold, where it will strain, and what to fix first.</p>
+      <p>An independent read on your system: where it will hold, where it will strain, and what to fix first. Useful when it was built faster than anyone could read it.</p>
     </li>
     <li>
       <h3>Technical Strategy</h3>
-      <p>Roadmaps, build-versus-buy calls, and platform decisions grounded in what your team can actually sustain.</p>
+      <p>Roadmaps, build-versus-buy calls, and platform decisions grounded in what your team can actually sustain. Including the version of that question everyone is facing now: what you let the model own, and what you do not.</p>
     </li>
     <li>
       <h3>Hands-On Engineering</h3>
-      <p>Senior engineering capacity for the work that matters most. Shipped, documented, and handed back cleanly.</p>
+      <p>Not extra capacity. The work that is actually hard: the bug nobody can find, the thing that broke and stayed broken, the piece everyone has been avoiding. Shipped, documented, and handed back cleanly.</p>
+    </li>
+    <li>
+      <h3>Getting Started with AI</h3>
+      <p>For small business owners with no engineering team who want to build something themselves.</p>
+      <p>Pair programming over a shared screen: setting up your tools, working through your actual project, and getting you moving again when the AI hands you something that does not work. You do the building. I am the person beside you who has done it before.</p>
+      <p>Booked by the hour.</p>
     </li>
   </ul>
 
