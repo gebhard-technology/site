@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting Ready — Picture routine chart for kids</title>
+<meta name="description" content="Getting Ready is a picture routine chart for iPhone that helps motivate kids through the mornings and bedtimes when getting ready is a struggle.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root {
+    --bg: #f8efde;
+    --bg-2: #efdfc3;
+    --card: #fffaf1;
+    --fg: #4a3227;
+    --muted: #86634f;
+    --rule: #e6d4b6;
+    --accent: #e2725b;
+    --sun: #f6c445;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1d1714;
+      --bg-2: #241c18;
+      --card: #2b221d;
+      --fg: #f3e7d6;
+      --muted: #c4a891;
+      --rule: #3b2f28;
+      --accent: #f08c75;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: linear-gradient(var(--bg), var(--bg-2)) fixed;
+    color: var(--fg);
+    font: 18px/1.6 ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 60rem; margin: 0 auto; padding: 4rem 1.25rem 3rem; }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
+  a:hover { opacity: 0.75; }
+
+  .hero { text-align: center; max-width: 38rem; margin: 0 auto; }
+  .hero img { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 10px 30px rgba(74, 50, 39, 0.18); }
+  h1 { font-size: clamp(2.4rem, 7vw, 3.4rem); line-height: 1.1; letter-spacing: -0.02em; margin: 1.5rem 0 0.5rem; font-weight: 800; }
+  .tagline { font-size: 1.25rem; color: var(--muted); margin: 0 0 1.75rem; font-weight: 600; }
+  .soon {
+    display: inline-block; padding: 0.7rem 1.4rem; border-radius: 999px;
+    background: var(--fg); color: var(--bg); font-weight: 700; font-size: 1rem;
+  }
+
+  .promise {
+    list-style: none; padding: 0; margin: 1.25rem 0 0;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;
+  }
+  .promise li {
+    padding: 0.35rem 0.9rem; border-radius: 999px; font-size: 0.95rem; font-weight: 600;
+    background: var(--card); border: 1px solid var(--rule); color: var(--muted);
+  }
+
+  .shots {
+    display: flex; gap: 1.25rem; justify-content: center;
+    margin: 3.5rem 0; overflow-x: auto; padding: 0.5rem 0 1rem;
+    scroll-snap-type: x mandatory;
+  }
+  .shots img {
+    width: 15rem; max-width: 70vw; height: auto; flex: 0 0 auto;
+    border-radius: 2rem; scroll-snap-align: center;
+    box-shadow: 0 14px 40px rgba(74, 50, 39, 0.2);
+  }
+
+  .story {
+    max-width: 38rem; margin: 0 auto 3rem; padding: 2rem 2rem 1.25rem;
+    background: var(--card); border: 1px solid var(--rule); border-radius: 1.5rem;
+  }
+  .story h2 { margin-top: 0; }
+  h2 { font-size: 1.5rem; line-height: 1.25; margin: 0 0 0.75rem; font-weight: 800; }
+  p { margin: 0 0 1rem; }
+
+  .features {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem; max-width: 52rem; margin: 0 auto 3rem; padding: 0; list-style: none;
+  }
+  .features li { background: var(--card); border: 1px solid var(--rule); border-radius: 1.25rem; padding: 1.25rem 1.4rem; }
+  .features strong { display: block; font-size: 1.05rem; margin-bottom: 0.2rem; }
+  .features span { color: var(--muted); font-size: 0.95rem; }
+
+  .privacy { max-width: 38rem; margin: 0 auto 2rem; text-align: center; }
+  .privacy p { color: var(--muted); }
+
+  footer {
+    max-width: 38rem; margin: 3rem auto 0; padding-top: 1.5rem;
+    border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9rem; text-align: center;
+  }
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <img src="images/icon.png" alt="Getting Ready app icon">
+    <h1>Getting Ready</h1>
+    <p class="tagline">A picture routine chart to help motivate kids</p>
+    <span class="soon">Coming soon to the App Store</span>
+    <ul class="promise">
+      <li>No ads</li>
+      <li>Nothing to buy inside the app</li>
+      <li>No accounts</li>
+    </ul>
+  </section>
+
+  <div class="shots">
+    <img src="images/01-morning-closed.jpg" alt="The morning chart with picture flaps for each task">
+    <img src="images/02-morning-all-lifted.jpg" alt="Every flap lifted, with a message saying morning all done">
+    <img src="images/03-night-all-lifted.jpg" alt="The night side of the chart with every task done">
+  </div>
+
+  <section class="story">
+    <h2>From one mom to the next</h2>
+    <p>I made Getting Ready for my own kids, for the mornings and bedtimes when
+    everything feels like a struggle. Instead of me repeating &ldquo;shoes on!&rdquo;
+    ten times, they follow their picture chart and lift a flap for each step. It
+    helped us on the hard days, so I wanted to share it with you.</p>
+  </section>
+
+  <ul class="features">
+    <li><strong>Lift a flap for each step</strong><span>Brush teeth, get dressed, shoes on. Every finished task shows a cheerful picture.</span></li>
+    <li><strong>Morning and night</strong><span>A double-sided board. Tap the sun or moon to flip to the other routine.</span></li>
+    <li><strong>Your own tasks</strong><span>Pick from ready-made tasks or make your own.</span></li>
+    <li><strong>More than one child</strong><span>Each child gets their own chart and their own color.</span></li>
+    <li><strong>Fresh every day</strong><span>The flaps close on their own each new day.</span></li>
+    <li><strong>Prop it up</strong><span>Works sideways too, so it can stand on the counter.</span></li>
+  </ul>
+
+  <section class="privacy">
+    <h2>Private by design</h2>
+    <p>No accounts, no ads, no tracking, and no in-app purchases. Everything stays
+    on your phone.</p>
+  </section>
+
+  <footer>
+    Gebhard Technology LLC &middot;
+    <a href="/getting-ready/support.html">Support</a> &middot;
+    <a href="/getting-ready/privacy.html">Privacy policy</a>
+  </footer>
+</main>
+</body>
+</html>
