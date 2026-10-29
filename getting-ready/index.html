@@ -46,10 +46,15 @@
   .hero img { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 10px 30px rgba(74, 50, 39, 0.18); }
   h1 { font-size: clamp(2.4rem, 7vw, 3.4rem); line-height: 1.1; letter-spacing: -0.02em; margin: 1.5rem 0 0.5rem; font-weight: 800; }
   .tagline { font-size: 1.25rem; color: var(--muted); margin: 0 0 1.75rem; font-weight: 600; }
-  .soon {
+  .cta-row {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem;
+  }
+  .cta {
     display: inline-block; padding: 0.7rem 1.4rem; border-radius: 999px;
     background: var(--fg); color: var(--bg); font-weight: 700; font-size: 1rem;
+    border: 1px solid transparent;
   }
+  .cta.soon { background: transparent; color: var(--muted); border-color: var(--rule); }
 
   .promise {
     list-style: none; padding: 0; margin: 1.25rem 0 0;
@@ -102,7 +107,10 @@
     <img src="images/icon.png" alt="Getting Ready app icon">
     <h1>Getting Ready</h1>
     <p class="tagline">A simple visual chart to help motivate kids when getting ready feels like a struggle</p>
-    <span class="soon">Coming soon to the App Store</span>
+    <div class="cta-row">
+      <a class="cta" href="https://apps.apple.com/us/app/getting-ready/id6820154147">Download on the App Store</a>
+      <span class="cta soon">Coming soon to Google Play</span>
+    </div>
     <ul class="promise">
       <li>No ads</li>
       <li>Nothing to buy inside the app</li>
