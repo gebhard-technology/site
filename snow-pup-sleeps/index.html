@@ -46,15 +46,11 @@
   .hero img { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 10px 30px rgba(28, 70, 56, 0.2); }
   h1 { font-size: clamp(2.4rem, 7vw, 3.4rem); line-height: 1.1; letter-spacing: -0.02em; margin: 1.5rem 0 0.5rem; font-weight: 800; }
   .tagline { font-size: 1.25rem; color: var(--muted); margin: 0 0 1.75rem; font-weight: 600; }
-  .cta-row {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem;
-  }
-  .cta {
+  .soon, .cta {
     display: inline-block; padding: 0.7rem 1.4rem; border-radius: 999px;
     background: var(--accent); color: var(--bg); font-weight: 700; font-size: 1rem;
-    border: 1px solid transparent;
   }
-  .cta.soon { background: transparent; color: var(--muted); border-color: var(--rule); }
+  .cta { border-bottom: none; }
   .promise {
     list-style: none; padding: 0; margin: 1.25rem 0 0;
     display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;
@@ -86,7 +82,7 @@
   .features strong { display: block; font-size: 1.05rem; margin-bottom: 0.2rem; }
   .features span { color: var(--muted); font-size: 0.95rem; }
 
-  .privacy { max-width: 38rem; margin: 0 auto 2rem; text-align: center; }
+  .privacy, .book { max-width: 38rem; margin: 0 auto 2rem; text-align: center; }
   .privacy p { color: var(--muted); }
 
   footer {
@@ -101,13 +97,10 @@
     <img src="images/icon.png" alt="Snow Pup Sleeps app icon">
     <h1>Snow Pup Sleeps</h1>
     <p class="tagline">A Christmas countdown for little ones, starring Oslo and Maui</p>
-    <div class="cta-row">
-      <a class="cta" href="https://www.amazon.com/Snow-Pup-Sleeps-Christmas-Adventures/dp/B0HP8JDGN3/">Get the book on Amazon</a>
-      <span class="cta soon">Coming soon to the App Store</span>
-    </div>
+    <span class="soon">Coming soon to the App Store</span>
     <ul class="promise">
       <li>No ads</li>
-      <li>Nothing to buy inside the app</li>
+      <li>Nothing to buy</li>
       <li>No accounts</li>
     </ul>
   </section>
@@ -137,6 +130,11 @@
     <h2>Private by design</h2>
     <p>No accounts, no ads, no tracking, and no in-app purchases. The app works
     offline and everything stays on your device.</p>
+  </section>
+
+  <section class="book">
+    <h2>A screen-free version</h2>
+    <a class="cta" href="https://www.amazon.com/Snow-Pup-Sleeps-Christmas-Adventures/dp/B0HP8JDGN3/">Get the book on Amazon</a>
   </section>
 
   <footer>
