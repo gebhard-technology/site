@@ -10,107 +10,214 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
   :root {
-    --bg: #f8efde;
-    --bg-2: #efdfc3;
-    --card: #fffaf1;
-    --fg: #4a3227;
-    --muted: #86634f;
-    --rule: #e6d4b6;
-    --accent: #e2725b;
-    --sun: #f6c445;
+    /* Lifted from the Pinterest clip: periwinkle sky, peach floor, ink-violet type. */
+    --wash-top: #dcd7fe;
+    --wash-upper: #e7e2f8;
+    --wash-lower: #f6e8e8;
+    --wash-bottom: #ffddca;
+    --glow-white: rgba(255, 255, 255, 0.6);
+    --glow-violet: rgba(188, 176, 255, 0.42);
+    --glow-peach: rgba(255, 203, 171, 0.42);
+    --fg: #30295d;
+    --muted: #575085;
+    --accent: #5d49c2;
+    --cta-ink: #fff;
+    --accent-soft: #988ce1;
+    --amber: #e49541;
+    --card: rgba(255, 255, 255, 0.72);
+    --card-solid: #fffdfb;
+    --rule: rgba(112, 99, 209, 0.16);
+    --shadow: 0 18px 50px rgba(61, 51, 115, 0.13);
+    --shadow-lift: 0 22px 60px rgba(61, 51, 115, 0.22);
+    --sparkle: #fff;
+    --sparkle-glow: rgba(119, 102, 204, 0.5);
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #1d1714;
-      --bg-2: #241c18;
-      --card: #2b221d;
-      --fg: #f3e7d6;
-      --muted: #c4a891;
-      --rule: #3b2f28;
-      --accent: #f08c75;
+      --wash-top: #2e2758;
+      --wash-upper: #262046;
+      --wash-lower: #2a2039;
+      --wash-bottom: #3d2c35;
+      --glow-white: rgba(255, 255, 255, 0.07);
+      --glow-violet: rgba(140, 122, 232, 0.22);
+      --glow-peach: rgba(226, 150, 106, 0.16);
+      --fg: #ece8fb;
+      --muted: #b3a9d8;
+      --accent: #a79bf2;
+      --cta-ink: #1d1836;
+      --accent-soft: #8b7fe0;
+      --amber: #f0a85c;
+      --card: rgba(255, 255, 255, 0.055);
+      --card-solid: #272046;
+      --rule: rgba(255, 255, 255, 0.12);
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+      --shadow-lift: 0 22px 60px rgba(0, 0, 0, 0.45);
+      --sparkle: #fff;
+      --sparkle-glow: rgba(190, 176, 255, 0.55);
     }
   }
+
   * { box-sizing: border-box; }
+
+  html {
+    min-height: 100%;
+    background:
+      /* soft glows, drifting down the page */
+      radial-gradient(38rem 26rem at 74% 5rem, var(--glow-white), transparent 65%),
+      radial-gradient(32rem 24rem at 14% 24rem, var(--glow-violet), transparent 66%),
+      radial-gradient(40rem 28rem at 88% 62%, var(--glow-peach), transparent 64%),
+      radial-gradient(34rem 24rem at 8% 92%, var(--glow-white), transparent 66%),
+      /* lavender at the top, warm peach at the bottom */
+      linear-gradient(180deg,
+        var(--wash-top) 0%,
+        var(--wash-upper) 26%,
+        var(--wash-lower) 62%,
+        var(--wash-bottom) 100%);
+  }
   body {
     margin: 0;
-    background: linear-gradient(var(--bg), var(--bg-2)) fixed;
+    min-height: 100vh;
     color: var(--fg);
-    font: 18px/1.6 ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font: 18px/1.65 ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-  main { max-width: 60rem; margin: 0 auto; padding: 4rem 1.25rem 3rem; }
+
+  main { max-width: 60rem; margin: 0 auto; padding: 4.5rem 1.25rem 3rem; }
   a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
   a:hover { opacity: 0.75; }
 
-  .hero { text-align: center; max-width: 38rem; margin: 0 auto; }
-  .hero img { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 10px 30px rgba(74, 50, 39, 0.18); }
-  h1 { font-size: clamp(2.4rem, 7vw, 3.4rem); line-height: 1.1; letter-spacing: -0.02em; margin: 1.5rem 0 0.5rem; font-weight: 800; }
-  .tagline { font-size: 1.25rem; color: var(--muted); margin: 0 0 1.75rem; font-weight: 600; }
-  .cta-row {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem;
-  }
-  .cta {
-    display: inline-block; padding: 0.7rem 1.4rem; border-radius: 999px;
-    background: var(--fg); color: var(--bg); font-weight: 700; font-size: 1rem;
-    border: 1px solid transparent;
+  /* Small uppercase label, the clip's "NO ADS · NO TRACKING" line. */
+  .label {
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--muted);
   }
 
-  .promise {
-    list-style: none; padding: 0; margin: 1.25rem 0 0;
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;
+  .hero { position: relative; text-align: center; max-width: 38rem; margin: 0 auto; }
+  .hero img.icon {
+    width: 112px; height: 112px; border-radius: 26px;
+    box-shadow: 0 14px 38px rgba(61, 51, 115, 0.22);
   }
-  .promise li {
-    padding: 0.35rem 0.9rem; border-radius: 999px; font-size: 0.95rem; font-weight: 600;
-    background: var(--card); border: 1px solid var(--rule); color: var(--muted);
+  h1 {
+    font-size: clamp(2.4rem, 7vw, 3.4rem); line-height: 1.1;
+    letter-spacing: -0.02em; font-weight: 800;
+    margin: 1.5rem 0 0.6rem;
+  }
+  .tagline {
+    font-size: 1.2rem; color: var(--muted); margin: 0 auto 2rem;
+    max-width: 30rem; font-weight: 500;
+  }
+
+  .cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem; }
+  .cta {
+    display: inline-block; padding: 0.85rem 1.6rem; border-radius: 999px;
+    font-weight: 700; font-size: 1rem; border: 1px solid transparent;
+    background: var(--accent); color: var(--cta-ink);
+    box-shadow: 0 10px 26px rgba(93, 73, 194, 0.32);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .cta:hover {
+    opacity: 1; transform: translateY(-2px);
+    box-shadow: 0 16px 34px rgba(93, 73, 194, 0.42);
+  }
+  .cta:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
+
+  /* Promise pills become one quiet middot line. */
+  .promise {
+    list-style: none; padding: 0; margin: 1.6rem 0 0;
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 0.2rem 0.9rem;
+  }
+  .promise li { display: flex; align-items: center; gap: 0.9rem; }
+  .promise li + li::before { content: "·"; color: var(--accent-soft); font-weight: 700; }
+  /* Once the line wraps, a leading middot looks like a stray bullet. */
+  @media (max-width: 34rem) {
+    .promise { flex-direction: column; align-items: center; gap: 0.35rem; }
+    .promise li + li::before { content: none; }
+  }
+
+  /* Sparkles: decorative, hidden from assistive tech. */
+  .sparkles { position: absolute; inset: -2rem -1rem auto; height: 30rem; pointer-events: none; z-index: -1; }
+  .sparkles svg {
+    position: absolute; width: var(--s); height: var(--s);
+    left: var(--x); top: var(--y); fill: var(--sparkle);
+    filter: drop-shadow(0 0 4px var(--sparkle-glow));
+    opacity: 0.9; animation: twinkle 4.5s ease-in-out infinite var(--d);
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.25; transform: scale(0.82); }
+    50% { opacity: 0.95; transform: scale(1); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .sparkles svg { animation: none; opacity: 0.7; }
+    .cta { transition: none; }
+    .cta:hover { transform: none; }
   }
 
   .shots {
     display: flex; gap: 1.25rem; justify-content: center;
-    margin: 3.5rem 0; overflow-x: auto; padding: 0.5rem 0 1rem;
+    margin: 4rem 0 1.75rem; overflow-x: auto; padding: 0.5rem 0 1rem;
     scroll-snap-type: x mandatory;
   }
   .shots img {
     width: 15rem; max-width: 70vw; height: auto; flex: 0 0 auto;
-    border-radius: 2rem; scroll-snap-align: center;
-    box-shadow: 0 14px 40px rgba(74, 50, 39, 0.2);
+    border-radius: 2.2rem; scroll-snap-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    box-shadow: var(--shadow-lift);
   }
 
   .story {
-    max-width: 38rem; margin: 0 auto 3rem; padding: 2rem 2rem 1.25rem;
-    background: var(--card); border: 1px solid var(--rule); border-radius: 1.5rem;
+    max-width: 38rem; margin: 0 auto 3rem; padding: 2.25rem 2.25rem 1.5rem;
+    background: var(--card); border: 1px solid var(--rule); border-radius: 1.75rem;
+    box-shadow: var(--shadow); backdrop-filter: blur(12px);
   }
   .story h2 { margin-top: 0; }
-  h2 { font-size: 1.5rem; line-height: 1.25; margin: 0 0 0.75rem; font-weight: 800; }
+  h2 { font-size: 1.5rem; line-height: 1.25; margin: 0 0 0.85rem; font-weight: 800; }
   p { margin: 0 0 1rem; }
 
   .features {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 1rem; max-width: 52rem; margin: 0 auto 3rem; padding: 0; list-style: none;
   }
-  .features li { background: var(--card); border: 1px solid var(--rule); border-radius: 1.25rem; padding: 1.25rem 1.4rem; }
-  .features strong { display: block; font-size: 1.05rem; margin-bottom: 0.2rem; }
+  .features li {
+    background: var(--card); border: 1px solid var(--rule); border-radius: 1.4rem;
+    padding: 1.4rem 1.5rem; box-shadow: var(--shadow); backdrop-filter: blur(12px);
+  }
+  .features strong { display: block; font-size: 1.05rem; margin-bottom: 0.25rem; }
   .features span { color: var(--muted); font-size: 0.95rem; }
 
   .privacy { max-width: 38rem; margin: 0 auto 2rem; text-align: center; }
   .privacy p { color: var(--muted); }
 
+  .closer { text-align: center; margin: 0 auto 3.5rem; font-size: 1.1rem; font-weight: 700; color: var(--muted); }
+
   footer {
-    max-width: 38rem; margin: 3rem auto 0; padding-top: 1.5rem;
-    border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9rem; text-align: center;
+    max-width: 38rem; margin: 1.5rem auto 0; padding-top: 1.5rem;
+    border-top: 1px solid var(--rule); color: var(--muted);
+    font-size: 0.9rem; text-align: center;
   }
+  footer a { color: var(--muted); }
 </style>
 </head>
 <body>
 <main>
   <section class="hero">
-    <img src="images/icon.png" alt="Getting Ready app icon">
+    <div class="sparkles" aria-hidden="true">
+      <svg viewBox="0 0 24 24" style="--s: 11px; --x: 6%;  --y: 9rem;   --d: 0s"><path d="M12 0c0 7 5 12 12 12-7 0-12 5-12 12 0-7-5-12-12-12 7 0 12-5 12-12z"/></svg>
+      <svg viewBox="0 0 24 24" style="--s: 7px; --x: 14%; --y: 21rem;  --d: 1.4s"><path d="M12 0c0 7 5 12 12 12-7 0-12 5-12 12 0-7-5-12-12-12 7 0 12-5 12-12z"/></svg>
+      <svg viewBox="0 0 24 24" style="--s: 8px; --x: 89%; --y: 4rem;   --d: 2.1s"><path d="M12 0c0 7 5 12 12 12-7 0-12 5-12 12 0-7-5-12-12-12 7 0 12-5 12-12z"/></svg>
+      <svg viewBox="0 0 24 24" style="--s: 12px; --x: 95%; --y: 15rem;  --d: 0.7s"><path d="M12 0c0 7 5 12 12 12-7 0-12 5-12 12 0-7-5-12-12-12 7 0 12-5 12-12z"/></svg>
+      <svg viewBox="0 0 24 24" style="--s: 6px; --x: 79%; --y: 24rem;  --d: 3s"><path d="M12 0c0 7 5 12 12 12-7 0-12 5-12 12 0-7-5-12-12-12 7 0 12-5 12-12z"/></svg>
+      <svg viewBox="0 0 24 24" style="--s: 9px; --x: 2%;  --y: 1.5rem; --d: 2.6s"><path d="M12 0c0 7 5 12 12 12-7 0-12 5-12 12 0-7-5-12-12-12 7 0 12-5 12-12z"/></svg>
+    </div>
+
+    <img class="icon" src="images/icon.png" alt="Getting Ready app icon">
     <h1>Getting Ready</h1>
     <p class="tagline">A simple visual chart to help motivate kids when getting ready feels like a struggle</p>
     <div class="cta-row">
       <a class="cta" href="https://apps.apple.com/us/app/getting-ready/id6820154147">Download on the App Store</a>
       <a class="cta" href="https://play.google.com/store/apps/details?id=com.gebhardtechnology.gettingready">Get it on Google Play</a>
     </div>
-    <ul class="promise">
+    <ul class="promise label">
       <li>No ads</li>
       <li>Nothing to buy inside the app</li>
       <li>No accounts</li>
@@ -122,6 +229,8 @@
     <img src="images/02-morning-all-lifted.jpg" alt="Every flap lifted, with a message saying morning all done">
     <img src="images/03-night-all-lifted.jpg" alt="The night side of the chart with every task done">
   </div>
+
+  <p class="closer">one tap at a time</p>
 
   <section class="story">
     <h2>From one mom to the next</h2>
@@ -138,7 +247,6 @@
     <li><strong>More than one child</strong><span>Each child gets their own chart and their own color.</span></li>
     <li><strong>Fresh every day</strong><span>The flaps close on their own each new day.</span></li>
     <li><strong>Prop it up</strong><span>Works sideways too, so it can stand on the counter.</span></li>
-    <li><strong>iPhone and Android</strong><span>The same app on either phone, with nothing to sign in to.</span></li>
   </ul>
 
   <section class="privacy">
