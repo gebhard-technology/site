@@ -51,6 +51,8 @@
     background: var(--accent); color: var(--bg); font-weight: 700; font-size: 1rem;
   }
   .cta { border-bottom: none; }
+  .buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+  .soon { background: transparent; color: var(--muted); box-shadow: inset 0 0 0 2px var(--rule); }
   .promise {
     list-style: none; padding: 0; margin: 1.25rem 0 0;
     display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;
@@ -97,7 +99,10 @@
     <img src="images/icon.png" alt="Snow Pup Sleeps app icon">
     <h1>Snow Pup Sleeps</h1>
     <p class="tagline">A Christmas countdown for little ones, starring Oslo and Maui</p>
-    <span class="soon">Coming soon to the App Store</span>
+    <div class="buttons">
+      <a class="cta" href="https://apps.apple.com/us/app/snow-pup-sleeps/id6822809572">Download on the App Store</a>
+      <span class="soon">Android coming soon</span>
+    </div>
     <ul class="promise">
       <li>No ads</li>
       <li>Nothing to buy</li>
