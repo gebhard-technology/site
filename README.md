@@ -20,7 +20,7 @@ Then visit http://localhost:8000.
 | `index.html` | Main page |
 | `styles.css` | Styles for the main page and the blog |
 | `blog/` | Blog index and posts |
-| `brand/` | Logo lockups and the social card, from the logo kit |
+| `brand/` | Logo lockups, the square mark, and the 1200x630 social card |
 | `fonts/` | Outfit, self-hosted so there is no third-party request |
 | `getting-ready/`, `snow-pup-sleeps/`, `daily-routines/` | App pages, each self-contained with its own styles |
 
@@ -53,8 +53,10 @@ The page uses only the blue and green from the logo, over ink text on white.
 | Text (ink) | `#14212B` | `#E9EEF2` |
 | Headline and post headings (green) | `#2E9B6E` | `#7FD6AE` |
 | Links and buttons (blue) | `#1F4FA8` | `#8FB4F5` |
+| Secondary text | `#566573` | `#94A3B0` |
 
 The green is 3.48:1 on white, which clears WCAG AA for large text but not for
 small. It is used on the headline and on blog post headings, both of which are
-large enough. Smaller headings stay ink and the uppercase section labels stay
-gray, so nothing on the page sits below AA.
+large enough, and both carry a comment in `styles.css` recording the size floor
+they must not drop below. Smaller headings stay ink and the uppercase section
+labels stay gray, so nothing on the page sits below AA.

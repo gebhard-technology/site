@@ -13,6 +13,12 @@
 <meta property="og:title" content="How to Host a Small Business Website for About $10 a Year">
 <meta property="og:description" content="Run a fast, professional small business website for about $10 a year: free hosting plus your own domain. What it costs, how to set it up, and the trade-offs.">
 <meta property="og:image" content="https://gebhardtechnology.com/brand/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How to host a small business website for about $10 a year">
+<meta property="og:site_name" content="Gebhard Technology">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../../favicon.ico" sizes="any">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
@@ -30,13 +36,13 @@
     <a class="wordmark" href="../../index.html"><picture><source media="(prefers-color-scheme: dark)" srcset="../../brand/logo-horizontal-reversed.svg"><img src="../../brand/logo-horizontal.svg" alt="Gebhard Technology" width="195" height="30"></picture></a>
     <nav class="site-nav" aria-label="Primary">
       <a href="../../index.html#services">Services</a>
-      <a href="index.html" aria-current="page">Blog</a>
+      <a href="../index.html">Blog</a>
       <a href="../../index.html#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<main class="sub" id="main">
+<main class="sub" id="main" tabindex="-1">
   <article>
   <h1>How to host a small business website for about $10 a year</h1>
   <p class="byline">By Becca Black &middot; October 2026</p>
@@ -60,7 +66,7 @@
   <p><strong>Option A: An all-in-one website builder</strong>, like Squarespace or Wix. You pick a template, edit it with drag and drop, and pay a monthly fee that covers hosting. The domain is usually free for the first year only.</p>
   <p><strong>Option B: A simple site on a free host, with your own domain.</strong> A simple website (developers call it a static site) is just a handful of files: a page of text, some styling, maybe a few images. A free host stores those files and serves them to visitors, and your domain points at the host. There is no server to maintain and nothing to update. You need four pieces:</p>
   <table>
-    <tr><th>Piece</th><th>Your options</th><th>Cost</th></tr>
+    <tr><th scope="col">Piece</th><th scope="col">Your options</th><th scope="col">Cost</th></tr>
     <tr><td>Domain name</td><td>Any domain registrar, like Cloudflare, Porkbun, or Namecheap. Compare the renewal price, not just the first year.</td><td>About $10.46 a year, same price at renewal</td></tr>
     <tr><td>Hosting</td><td>A free host for simple sites that allows business use, like Cloudflare Pages or Netlify</td><td>Free</td></tr>
     <tr><td>HTTPS (the padlock in the browser)</td><td>Included with all of the hosts above</td><td>Free</td></tr>
@@ -70,14 +76,14 @@
   <h2>Comparison</h2>
   <p>When I priced this out, here is how the cheapest plans compared:</p>
   <table>
-    <tr><th>Option</th><th>Cost</th><th>Custom domain</th></tr>
+    <tr><th scope="col">Option</th><th scope="col">Cost</th><th scope="col">Custom domain</th></tr>
     <tr><td>Squarespace</td><td>$15.20 a <b>month</b> (about $182 a year), billed annually</td><td>Free for the first year only, then standard renewal rates</td></tr>
     <tr><td>Wix</td><td>$14.50 a <b>month</b> (about $174 a year)</td><td>Free for the first year only</td></tr>
     <tr><td>This setup</td><td>About $10.46 a <b>year</b></td><td>That is the cost: the domain itself, same price every year</td></tr>
   </table>
   <p>Those are the entry-level plans. Plans with more features cost more.</p>
   <table>
-    <tr><th></th><th>Website builder</th><th>Simple site + free host</th></tr>
+    <tr><th scope="col"></th><th scope="col">Website builder</th><th scope="col">Simple site + free host</th></tr>
     <tr><td>Yearly cost</td><td>About $174 to $182 for the entry-level plans, more for higher tiers, plus the domain after year one</td><td>About $10.46 for the domain</td></tr>
     <tr><td>Customization</td><td>Limited to the builder's templates and features</td><td>Unlimited. If you can describe it, AI can build it</td></tr>
     <tr><td>Editing</td><td>Drag and drop</td><td>Describe what you want in plain English. Easier than drag and drop, and you can fully describe your vision</td></tr>
@@ -97,7 +103,7 @@
   <ol>
     <li><strong>Buy your domain.</strong> Choose your domain name, like yourbusiness.com, and buy it from a registrar. Look at the renewal price, since some registrars offer a cheap first year and then charge much more. Your registrar usually also manages your DNS, the settings that tell the internet where your domain points.<br><em>For example:</em> Cloudflare sells domains at cost, so renewal is the same price as the first year. Step-by-step: <a href="https://developers.cloudflare.com/registrar/get-started/register-domain/">Register a new domain (Cloudflare)</a>.</li>
     <li><strong>Create your site files.</strong> If you do not write code, AI can do it. Describe what you want in plain English, for example: "Make a one-page website for my bakery in Denver with our hours, a few photos, a short About section, and our phone number and email. Keep it simple and mobile friendly." Save what it gives you as <code>index.html</code>. The free plans of Claude and ChatGPT can both do this. They have daily message limits, so a bigger change might take a second session. To change the site later, paste in your current file and describe the change. Paid plans add tools like Claude Code and OpenAI's Codex that can create and edit the files on your computer for you, so you skip the copy and paste.<br><em>For example:</em> Use the free plan of <a href="https://claude.ai">Claude</a> or <a href="https://chatgpt.com">ChatGPT</a> with a prompt like the one above.</li>
-    <li><strong>Test your site.</strong> Open the html that you generated in a browser and test it. Make sure it looks and works the way you want. Go back to the pervious step to fix or change things.</li>
+    <li><strong>Test your site.</strong> Open the html that you generated in a browser and test it. Make sure it looks and works the way you want. Go back to the previous step to fix or change things.</li>
     <li><strong>Connect your domain.</strong> Your host tells you which DNS records to add, and you add them wherever your DNS is managed.<br><em>For example:</em> If your domain is on Cloudflare, open your Pages project, go to Custom domains, and add it. Cloudflare creates the DNS record for you. Step-by-step: <a href="https://developers.cloudflare.com/pages/configuration/custom-domains/">Custom domains (Cloudflare Pages)</a>.</li>
     <li><strong>Make sure HTTPS works.</strong> All of these hosts support SSL (the padlock in the browser that shows your site is secure) for free. Visit your site with <code>https://</code> and check that it shows.<br><em>For example:</em> Cloudflare issues the certificate when you add your custom domain. Once the domain shows as active, check for the padlock.</li>
     <li><strong>Verify your domain with your host, if it asks.</strong> This proves the domain is yours and stops anyone else from connecting their site to it. Most guides skip this step. Do not.<br><em>For example:</em> With Cloudflare Pages and your domain on the same Cloudflare account, this is handled for you. Other hosts, like GitHub Pages, have you add a <code>TXT</code> record to prove ownership. Step-by-step: <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages">Verifying your custom domain for GitHub Pages</a>.</li>
