@@ -6,11 +6,13 @@
 <title>Gebhard Technology | Fractional Principal Engineer in Denver, CO</title>
 <meta name="description" content="Denver-based principal engineer helping small businesses review AI-built code, plan technical strategy, and ship software. Architecture reviews, AI coaching, and hands-on engineering.">
 <link rel="canonical" href="https://gebhardtechnology.com/">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101b24" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gebhardtechnology.com/">
 <meta property="og:title" content="Gebhard Technology | Fractional Principal Engineer in Denver">
 <meta property="og:description" content="Architecture reviews, technical strategy, and AI coaching for small businesses in Denver and beyond.">
-<meta property="og:image" content="https://gebhardtechnology.com/apple-touch-icon.png">
+<meta property="og:image" content="https://gebhardtechnology.com/brand/social-card.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -18,7 +20,7 @@
   "name": "Gebhard Technology",
   "url": "https://gebhardtechnology.com/",
   "email": "becca@gebhardtechnology.com",
-  "logo": "https://gebhardtechnology.com/apple-touch-icon.png",
+  "logo": "https://gebhardtechnology.com/brand/social-card.png",
   "description": "Denver-based software consultancy offering architecture and code reviews, technical strategy, hands-on engineering, and AI coaching for small businesses.",
   "areaServed": [
     {"@type": "City", "name": "Denver"},
@@ -39,47 +41,82 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/outfit.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main>
-  <h1>Gebhard Technology</h1>
-  <p class="byline">Software consultancy &amp; product studio &middot; Denver, Colorado</p>
-  <p class="note">The hard part stopped being writing the code. It is knowing whether what you have is right, and what to do when it stops working. The model can do that most of the time. It just cannot tell you which time this is.</p>
-  <h2>Services</h2>
-  <ul>
-    <li>
-      <h3>Architecture Reviews</h3>
-      <p>An independent read on your system: where it will hold, where it will strain, and what to fix first. Useful when it was built faster than anyone could read it.</p>
-    </li>
-    <li>
-      <h3>Technical Strategy</h3>
-      <p>Roadmaps, build-versus-buy calls, and platform decisions grounded in what your team can actually sustain. Including the version of that question everyone is facing now: what you let the model own, and what you do not.</p>
-    </li>
-    <li>
-      <h3>Hands-On Engineering</h3>
-      <p>Not extra capacity. The work that is actually hard: the bug nobody can find, the thing that broke and stayed broken, the piece everyone has been avoiding. Shipped, documented, and handed back cleanly.</p>
-    </li>
-    <li>
-      <h3>Getting Started with AI</h3>
-      <p>For small business owners with no engineering team who want to build something themselves.</p>
-      <p>Pair programming over a shared screen: setting up your tools, working through your actual project, and getting you moving again when the AI hands you something that does not work. You do the building. I am the person beside you who has done it before.</p>
-      <p>Booked by the hour.</p>
-    </li>
-  </ul>
+<a class="skip" href="#main">Skip to content</a>
 
-  <h2>Our Own Products</h2>
-  <p class="note tight">Alongside client work, Gebhard Technology designs and builds its own software products, developed and maintained in house. The same standards we bring to a client engagement, applied to what we ship under our own name.</p>
-  <h2>About</h2>
-  <p class="note">Gebhard Technology is a small, independent software company based in Denver, Colorado. We help small businesses and growing teams get real value out of software, including the code AI now writes for them. Founded by <a href="https://www.linkedin.com/in/rlgeb">Becca Black</a>, a principal engineer with 16 years of experience.</p>
+<header class="site-header">
+  <div class="bar">
+    <a class="wordmark" href="index.html"><picture><source media="(prefers-color-scheme: dark)" srcset="brand/logo-horizontal-reversed.svg"><img src="brand/logo-horizontal.svg" alt="Gebhard Technology" width="195" height="30"></picture></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <h2>Blog</h2>
-  <p class="note"><a href="blog/index.html">Notes on software and AI</a></p>
+<main class="home" id="main">
+  <section class="hero">
+    <h1>Software consultancy and product studio</h1>
+    <p class="lede">The hard part stopped being writing the code. It is knowing whether what you have is right, and what to do when it stops working. The model can do that most of the time. It just cannot tell you which time this is.</p>
+  </section>
 
-  <h2>Contact</h2>
-  <p><a href="mailto:becca@gebhardtechnology.com">becca@gebhardtechnology.com</a></p>
+  <section class="section" id="services">
+    <h2>Services</h2>
+    <ul class="rows">
+      <li>
+        <h3>Architecture Reviews</h3>
+        <p>An independent read on your system: where it will hold, where it will strain, and what to fix first. Useful when it was built faster than anyone could read it.</p>
+      </li>
+      <li>
+        <h3>Technical Strategy</h3>
+        <p>Roadmaps, build-versus-buy calls, and platform decisions grounded in what your team can actually sustain. Including the version of that question everyone is facing now: what you let the model own, and what you do not.</p>
+      </li>
+      <li>
+        <h3>Hands-On Engineering</h3>
+        <p>Not extra capacity. The work that is actually hard: the bug nobody can find, the thing that broke and stayed broken, the piece everyone has been avoiding. Shipped, documented, and handed back cleanly.</p>
+      </li>
+      <li>
+        <h3>Getting Started with AI</h3>
+        <p>For small business owners with no engineering team who want to build something themselves.</p>
+        <p>Pair programming over a shared screen: setting up your tools, working through your actual project, and getting you moving again when the AI hands you something that does not work. You do the building. I am the person beside you who has done it before.</p>
+        <p>Booked by the hour.</p>
+      </li>
+    </ul>
+  </section>
 
-  <footer>&copy; 2026 Gebhard Technology LLC</footer>
+  <section class="section" id="products">
+    <h2>Our Own Products</h2>
+    <p class="note">Alongside client work, Gebhard Technology designs and builds its own software products, developed and maintained in house. The same standards we bring to a client engagement, applied to what we ship under our own name.</p>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About</h2>
+    <p class="note">Gebhard Technology is a small, independent software company based in Denver, Colorado. We help small businesses and growing teams get real value out of software, including the code AI now writes for them. Founded by <a href="https://www.linkedin.com/in/rlgeb">Becca Black</a>, a principal engineer with 16 years of experience.</p>
+  </section>
+
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p class="note tight">Tell me what you are building, or what stopped working. A real person reads it and will write back.</p>
+    <div class="contact">
+      <a class="btn" href="mailto:becca@gebhardtechnology.com">becca@gebhardtechnology.com</a>
+    </div>
+  </section>
 </main>
+
+<footer class="site-footer">
+  <div class="bar">
+    <span class="legal">&copy; 2026 Gebhard Technology LLC &middot; Denver, Colorado</span>
+    <nav class="site-nav" aria-label="Footer">
+      <a href="blog/index.html">Blog</a>
+      <a href="https://www.linkedin.com/company/gebhard-technology">LinkedIn</a>
+      <a href="mailto:becca@gebhardtechnology.com">Email</a>
+    </nav>
+  </div>
+</footer>
 </body>
 </html>
