@@ -22,7 +22,7 @@ Then visit http://localhost:8000.
 | `blog/` | Blog index and posts |
 | `brand/` | Logo lockups and the social card, from the logo kit |
 | `fonts/` | Outfit, self-hosted so there is no third-party request |
-| `getting-ready/`, `snow-pup-sleeps/`, `while-were-out/`, `daily-routines/` | App pages, each self-contained with its own styles |
+| `getting-ready/`, `snow-pup-sleeps/`, `daily-routines/` | App pages, each self-contained with its own styles |
 
 The app pages are deliberately styled on their own and do not share `styles.css`.
 
