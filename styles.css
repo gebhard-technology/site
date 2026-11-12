@@ -85,9 +85,7 @@ main a:hover { opacity: 0.75; }
 .site-nav a[aria-current="page"] { color: var(--fg); font-weight: 600; }
 
 .site-footer { border-top: 1px solid var(--rule); margin-top: 4rem; }
-.site-footer .bar { align-items: center; color: var(--muted); font-size: 0.88rem; padding-top: 1.6rem; padding-bottom: 2.5rem; }
-.site-footer a { color: var(--muted); border-bottom: 1px solid currentColor; }
-.site-footer a:hover { color: var(--fg); }
+.site-footer .bar { color: var(--muted); font-size: 0.88rem; padding-top: 1.6rem; padding-bottom: 2.5rem; }
 
 /* Page shell */
 main {
