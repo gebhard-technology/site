@@ -28,10 +28,9 @@ The app pages are deliberately styled on their own and do not share `styles.css`
 
 ## Brand
 
-Assets come from the logo kit (`~/Desktop/Gebhard Technology LLC/gebhard-technology-logo-kit`).
-The site uses the horizontal lockup in the nav, as the kit specifies, swapping to
-the reversed version in dark mode. Colors are defined once as custom properties at
-the top of `styles.css`:
+The site uses the horizontal logo lockup in the nav, as the logo kit specifies,
+swapping to the reversed version in dark mode. Colors are defined once as custom
+properties at the top of `styles.css`:
 
 | | Hex |
 | --- | --- |
