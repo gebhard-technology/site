@@ -8,6 +8,14 @@
   src: url("fonts/outfit.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "Bgebs";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/BgebsV2-Regular.ttf") format("truetype");
+}
+
 :root {
   /* Straight from the logo kit: blue, green, ink */
   --bg: #ffffff;
@@ -74,6 +82,13 @@ main a:hover { opacity: 0.75; }
 .wordmark { display: inline-flex; border-bottom: 0; }
 .wordmark img { display: block; width: auto; height: 30px; }
 .wordmark:hover { opacity: 0.75; }
+.littles-wordmark {
+  align-self: center;
+  margin-inline-start: 0.5rem;
+  color: var(--fg);
+  font: 400 1.5rem/1 "Bgebs", var(--display);
+  white-space: nowrap;
+}
 .site-nav { display: flex; flex-wrap: wrap; gap: 0.2rem 1.4rem; }
 .site-nav a {
   font-size: 0.92rem;
@@ -162,6 +177,57 @@ li p + p { margin-top: 0.75rem; }
 .rows { margin-bottom: 0; }
 .rows > li:first-child { border-top: 0; padding-top: 0; }
 .rows > li:last-child { border-bottom: 0; padding-bottom: 0; }
+
+/* Kids' apps landing page */
+.littles .hero { margin-bottom: 3rem; }
+.littles .hero + .section { border-top: 0; padding-top: 0; }
+.littles .littles-heading {
+  color: var(--fg);
+  font: 400 clamp(1.9rem, 5vw, 2.5rem)/1.1 "Bgebs", var(--display);
+  text-transform: none;
+  letter-spacing: normal;
+  margin-bottom: 1.15rem;
+}
+.family-expectations {
+  margin-top: 1.75rem;
+  padding: clamp(1rem, 4vw, 1.75rem);
+  border-radius: 1.25rem;
+  background: color-mix(in srgb, var(--green) 10%, var(--bg));
+}
+.littles .family-expectations h3 {
+  font-size: clamp(1.5rem, 4vw, 1.85rem);
+  margin-top: 0;
+}
+.family-expectations .rows > li {
+  position: relative;
+  padding-block: 0.4rem;
+  padding-inline-start: 1.35rem;
+  border: 0;
+}
+.family-expectations li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0.15rem;
+  top: calc(0.4rem + 0.55em);
+  width: 0.55rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #d69182;
+}
+.family-expectations li:nth-child(2)::before { background: #d9ae68; }
+.family-expectations li:nth-child(3)::before { background: #8bb5a2; }
+.littles-app {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(.75rem, 3vw, 1.25rem);
+}
+.littles-app img {
+  display: block;
+  width: clamp(3rem, 12vw, 4.5rem);
+  height: auto;
+  border-radius: 22%;
+}
 
 /* Contact */
 .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.5rem; }
