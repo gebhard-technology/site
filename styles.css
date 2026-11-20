@@ -229,6 +229,42 @@ li p + p { margin-top: 0.75rem; }
   border-radius: 22%;
 }
 
+.apps-more {
+  margin: 1.75rem 0 0;
+  font-style: italic;
+}
+.rocket {
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: -0.22em;
+  margin-right: 0.35em;
+}
+
+.about-body {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.25rem, 5vw, 2.5rem);
+}
+.about-body .note { margin: 0 0 1rem; }
+.about-body .note:last-child { margin-bottom: 0; }
+.littles-photo {
+  display: block;
+  width: clamp(6.5rem, 20vw, 9rem);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: var(--lift);
+}
+@media (max-width: 34rem) {
+  .about-body {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 1.5rem;
+  }
+}
+
 /* Contact */
 .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.5rem; }
 
