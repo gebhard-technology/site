@@ -84,6 +84,26 @@ footer {
 }
 :focus-visible { outline: 2px solid var(--fg); outline-offset: 4px; }
 
+/* Support and privacy pages */
+main.doc { max-width: 42rem; }
+.doc h1 { font-size: clamp(2rem, 5.5vw, 2.6rem); margin: 0 0 0.5rem; }
+.doc h2 {
+  font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.09em;
+  color: var(--muted); font-weight: 700; margin: 2.75rem 0 0.9rem;
+}
+.doc h3 { font-size: 1.1rem; font-weight: 800; margin: 1.9rem 0 0.4rem; }
+.doc ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+.doc li { margin: 0.35rem 0; }
+.doc .updated { color: var(--muted); margin: 0 0 2.5rem; }
+.doc .lede { font-size: 1.1rem; }
+.doc h1 + .lede { margin-top: 1.25rem; }
+.doc footer { max-width: none; margin-top: 3.5rem; text-align: left; }
+.contact {
+  margin: 0 0 1rem; padding: 1.5rem 1.6rem;
+  background: var(--card); border: 1px solid var(--rule); border-radius: 1.25rem;
+}
+.contact p:last-child { margin-bottom: 0; }
+
 .screenshot-banner {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
