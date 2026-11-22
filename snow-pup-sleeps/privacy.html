@@ -8,70 +8,12 @@
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<style>
-  :root {
-    --bg: #ffffff;
-    --fg: #16181d;
-    --muted: #5b6270;
-    --rule: #e4e6ea;
-    --accent: #1f4fd8;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #101215;
-      --fg: #e9ebef;
-      --muted: #9aa2b1;
-      --rule: #272b32;
-      --accent: #7d9bff;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--fg);
-    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-  main {
-    max-width: 40rem;
-    margin: 0 auto;
-    padding: 5rem 1.5rem 4rem;
-  }
-  h1 {
-    font-size: 1.9rem;
-    line-height: 1.25;
-    letter-spacing: -0.02em;
-    margin: 0 0 0.5rem;
-  }
-  h2 {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.09em;
-    color: var(--muted);
-    font-weight: 600;
-    margin: 2.5rem 0 0.9rem;
-  }
-  h3 { font-size: 1rem; font-weight: 600; margin: 1.75rem 0 0.4rem; }
-  p { margin: 0 0 1rem; }
-  ul { margin: 0 0 1rem; padding-left: 1.2rem; }
-  li { margin: 0.35rem 0; }
-  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
-  a:hover { opacity: 0.75; }
-  .updated { color: var(--muted); margin: 0 0 2.5rem; }
-  .lede { font-size: 1.05rem; }
-  .contact {
-    margin: 0 0 1rem;
-    padding: 1.25rem 1.4rem;
-    border: 1px solid var(--rule);
-    border-radius: 10px;
-  }
-  .contact p:last-child { margin-bottom: 0; }
-  footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9rem; }
-</style>
+<meta name="theme-color" content="#eaf2fb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1a22" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="snow-pup-sleeps.css">
 </head>
 <body>
-<main>
+<main class="doc">
   <h1>Privacy Policy: Snow Pup Sleeps</h1>
   <p class="updated">Last updated 9 November 2026</p>
 
