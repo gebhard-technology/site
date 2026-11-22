@@ -21,7 +21,7 @@ Then visit http://localhost:8000.
 | `styles.css` | Styles for the main page and the blog |
 | `blog/` | Blog index and posts |
 | `brand/` | Logo lockups, the square mark, and the 1200x630 social card |
-| `fonts/` | Outfit, self-hosted so there is no third-party request |
+| `fonts/` | Outfit, Bgebs and Fraunces, self-hosted so there is no third-party request |
 | `getting-ready/`, `snow-pup-sleeps/`, `daily-routines/` | App pages, each self-contained with its own styles |
 
 The app pages are deliberately styled on their own and do not share `styles.css`.

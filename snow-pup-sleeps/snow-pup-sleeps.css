@@ -1,24 +1,40 @@
-:root {
-  --bg: #eaf2fb;
-  --bg-2: #faf6ec;
-  --card: #fffdf7;
-  --fg: #1c4638;
-  --muted: #4f6b62;
-  --rule: #d6e2ee;
-  --accent: #be3a37;
-  --gold: #d9a441;
-  --icon-shadow: #1c463833;
+/* Snow Pup Sleeps 2.0. Colours are the app's own, from SnowPupSleeps/Theme.swift,
+   and the token each one comes from is named beside it. */
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/Fraunces-SemiBold.ttf") format("truetype");
 }
+
+:root {
+  --bg: #d4e6f6;       /* frost, the top of the sky */
+  --bg-2: #fbf8f3;     /* paper, by the time it reaches the bottom */
+  --card: #fbf8f3;     /* paper */
+  --oat: #efe6d8;      /* oat, a door whose day has not arrived */
+  --fg: #3f3833;       /* ink */
+  --muted: #6c6259;    /* inkSoft */
+  --rule: #cfc8be;     /* brand warm grey */
+  --spruce: #5f7563;   /* spruce, the wordmark green */
+  --accent: #96513f;   /* clay, deepened for small text: 4.64:1 on frost, 5.59:1 on paper */
+  --brass: #a67f3e;    /* brass, the ring around today's door */
+  --icon-shadow: #3f383326;
+}
+/* The app is always light, because it is paper. A browser at night is a
+   different room, so the site keeps a night theme built from the same inks. */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0f1a22;
-    --bg-2: #14211c;
-    --card: #1a2a26;
-    --fg: #eef4f0;
-    --muted: #a9c0b7;
-    --rule: #2a3d37;
-    --accent: #f07a72;
-    --gold: #e6bf79;
+    --bg: #2a2522;
+    --bg-2: #211e1c;
+    --card: #332d29;
+    --oat: #3b3531;
+    --fg: #fbf8f3;
+    --muted: #cfc8be;
+    --rule: #4a423c;
+    --spruce: #a9bcac;
+    --accent: #e0a892;
+    --brass: #d9b36c;
     --icon-shadow: #0005;
   }
 }
@@ -37,13 +53,19 @@ a:hover { opacity: 0.75; }
 
 .hero { text-align: center; max-width: 40rem; margin: 0 auto; }
 .hero img { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 10px 30px var(--icon-shadow); }
-h1 { font-size: clamp(2.4rem, 7vw, 3.4rem); line-height: 1.1; letter-spacing: -0.02em; margin: 1.5rem 0 0.5rem; font-weight: 800; }
-.tagline { font-size: 1.25rem; color: var(--muted); margin: 0 0 1.75rem; font-weight: 600; }
+/* Fraunces and spruce, the same pairing as the wordmark in the banner below.
+   3.91:1 on frost, which clears AA for text this size and must not drop below it. */
+h1 {
+  font: 600 clamp(2.4rem, 7vw, 3.4rem)/1.1 "Fraunces", Georgia, "Times New Roman", serif;
+  letter-spacing: -0.01em; margin: 1.5rem 0 0.5rem; color: var(--spruce);
+}
+.tagline { font-size: 1.2rem; color: var(--muted); margin: 0 0 1.75rem; font-weight: 600; }
 .cta {
   display: inline-block; padding: 0.7rem 1.4rem; border-radius: 999px;
-  background: var(--accent); color: var(--bg); font-weight: 700; font-size: 1rem;
+  background: var(--accent); color: #fbf8f3; font-weight: 700; font-size: 1rem;
   border-bottom: none;
 }
+@media (prefers-color-scheme: dark) { .cta { color: #211e1c; } }
 .buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
 .promise {
   list-style: none; padding: 0; margin: 1.25rem 0 0;
@@ -51,7 +73,7 @@ h1 { font-size: clamp(2.4rem, 7vw, 3.4rem); line-height: 1.1; letter-spacing: -0
 }
 .promise li {
   padding: 0.35rem 0.9rem; border-radius: 999px; font-size: 0.95rem; font-weight: 600;
-  background: var(--card); border: 1px solid var(--rule); color: var(--muted);
+  background: var(--oat); border: 1px solid var(--rule); color: var(--muted);
 }
 
 .banner {
@@ -64,7 +86,7 @@ h1 { font-size: clamp(2.4rem, 7vw, 3.4rem); line-height: 1.1; letter-spacing: -0
   background: var(--card); border: 1px solid var(--rule); border-radius: 1.5rem;
 }
 .story h2 { margin-top: 0; }
-h2 { font-size: 1.5rem; line-height: 1.25; margin: 0 0 0.75rem; font-weight: 800; }
+h2 { font: 600 1.6rem/1.25 "Fraunces", Georgia, "Times New Roman", serif; margin: 0 0 0.75rem; }
 p { margin: 0 0 1rem; }
 
 .features {
@@ -79,10 +101,10 @@ p { margin: 0 0 1rem; }
 .privacy p, .note { color: var(--muted); }
 .note { font-size: 0.95rem; margin: 1rem 0 0; }
 
-/* The gold ring around today's door, borrowed for the screen-free card. */
+/* The brass ring around today's door, lent to the screen-free card. */
 .book {
   padding: 2rem 2rem 1.75rem;
-  background: var(--card); border: 1px solid var(--gold); border-radius: 1.5rem;
+  background: var(--card); border: 1px solid var(--brass); border-radius: 1.5rem;
 }
 
 footer {
@@ -91,14 +113,40 @@ footer {
 }
 :focus-visible { outline: 2px solid var(--fg); outline-offset: 4px; }
 
+.screenshot-banner {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.5rem, 3vw, 1.25rem);
+  padding: clamp(0.65rem, 4vw, 1.75rem);
+  background: var(--card);
+  border: 1px solid var(--rule);
+}
+.screenshot-banner figure { margin: 0; text-align: center; }
+.screenshot-banner img {
+  display: block;
+  width: min(100%, 12rem);
+  height: auto;
+  margin-inline: auto;
+  border-radius: clamp(0.4rem, 2vw, 1rem);
+  box-shadow: 0 0.25rem 0.85rem var(--icon-shadow);
+}
+.screenshot-banner figcaption {
+  margin-top: 0.65rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
 /* Support and privacy pages */
 main.doc { max-width: 42rem; }
 .doc h1 { font-size: clamp(2rem, 5.5vw, 2.6rem); margin: 0 0 0.5rem; }
 .doc h2 {
-  font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.09em;
-  color: var(--muted); font-weight: 700; margin: 2.75rem 0 0.9rem;
+  font-family: inherit; font-size: 0.78rem; font-weight: 700; line-height: 1.6;
+  text-transform: uppercase; letter-spacing: 0.09em;
+  color: var(--muted); margin: 2.75rem 0 0.9rem;
 }
-.doc h3 { font-size: 1.1rem; font-weight: 800; margin: 1.9rem 0 0.4rem; }
+.doc h3 { font: 600 1.15rem/1.3 "Fraunces", Georgia, "Times New Roman", serif; margin: 1.9rem 0 0.4rem; }
 .doc ul { margin: 0 0 1rem; padding-left: 1.2rem; }
 .doc li { margin: 0.35rem 0; }
 .doc .updated { color: var(--muted); margin: 0 0 2.5rem; }
