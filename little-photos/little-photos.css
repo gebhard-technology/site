@@ -14,7 +14,7 @@
   --card: #fbf8f3;     /* paper */
   --oat: #efe6d8;      /* oat, rows and cards in Settings */
   --fg: #4a4458;       /* ink, titles and body text */
-  --muted: #6e6560;    /* pencil: 5.37:1 on paper, 4.38:1 on linen, so small text sits on paper */
+  --muted: #685f5a;    /* pencil, a shade darker so it clears 4.5:1 on linen too (4.8:1; 5.9:1 on paper) */
   --rule: #dcd3c3;     /* edge, the page edge lines */
   --ochre: #c9a266;    /* ochre, the curled corners and the ribbon */
   --accent: #7d5f2c;   /* ochre, deepened for text: 5.59:1 on paper, 4.56:1 on linen */
