@@ -1,0 +1,150 @@
+/* Little Photos. Colours are the app's own, from ios/App/Theme.swift, and the
+   token each one comes from is named beside it. */
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/Fraunces-SemiBold.ttf") format("truetype");
+}
+
+:root {
+  --bg: #e9e1d3;       /* linen, the tablecloth around the book */
+  --bg-2: #fbf8f3;     /* paper */
+  --card: #fbf8f3;     /* paper */
+  --oat: #efe6d8;      /* oat, rows and cards in Settings */
+  --fg: #4a4458;       /* ink, titles and body text */
+  --muted: #685f5a;    /* pencil, a shade darker so it clears 4.5:1 on linen too (4.8:1; 5.9:1 on paper) */
+  --rule: #dcd3c3;     /* edge, the page edge lines */
+  --ochre: #c9a266;    /* ochre, the curled corners and the ribbon */
+  --accent: #7d5f2c;   /* ochre, deepened for text: 5.59:1 on paper, 4.56:1 on linen */
+  --icon-shadow: #4a445826;
+}
+/* The app is always light, because it is paper. A browser at night is a
+   different room, so the site keeps a night theme built from the same inks. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #2b2826;
+    --bg-2: #211f1d;
+    --card: #33302d;
+    --oat: #3b3734;
+    --fg: #fbf8f3;
+    --muted: #dcd3c3;
+    --rule: #4a4440;
+    --ochre: #c9a266;
+    --accent: #e0bf86;
+    --icon-shadow: #0005;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: linear-gradient(var(--bg), var(--bg-2)) fixed;
+  color: var(--fg);
+  font: 18px/1.6 ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+main { max-width: 60rem; margin: 0 auto; padding: 4rem 1rem 3rem; }
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
+a:hover { opacity: 0.75; }
+
+.hero { text-align: center; max-width: 40rem; margin: 0 auto; }
+.hero img { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 10px 30px var(--icon-shadow); }
+h1 {
+  font: 600 clamp(2.4rem, 7vw, 3.4rem)/1.1 "Fraunces", Georgia, "Times New Roman", serif;
+  letter-spacing: -0.01em; margin: 1.5rem 0 0.5rem; color: var(--fg);
+}
+.tagline { font-size: 1.2rem; color: var(--muted); margin: 0 0 1.75rem; font-weight: 600; }
+.cta {
+  display: inline-block; padding: 0.7rem 1.4rem; border-radius: 999px;
+  background: var(--fg); color: var(--bg-2); font-weight: 700; font-size: 1rem;
+  border-bottom: none;
+}
+/* Not out yet: the same pill, quiet, and not a link. */
+.soon {
+  display: inline-block; padding: 0.7rem 1.4rem; border-radius: 999px;
+  background: var(--card); border: 1px dashed var(--ochre); color: var(--fg);
+  font-weight: 700; font-size: 1rem;
+}
+.buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+.promise {
+  list-style: none; padding: 0; margin: 1.25rem 0 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;
+}
+.promise li {
+  padding: 0.35rem 0.9rem; border-radius: 999px; font-size: 0.95rem; font-weight: 600;
+  background: var(--card); border: 1px solid var(--rule); color: var(--muted);
+}
+
+/* The watercolor album on its tablecloth, framed like a print. */
+.banner {
+  display: block; width: 100%; max-width: 52rem; height: auto; margin: 3rem auto;
+  border-radius: 1.5rem; border: 1px solid var(--rule);
+  box-shadow: 0 14px 40px var(--icon-shadow);
+}
+
+/* The shelf from the app: two ochre ledges of four cloth albums each. */
+.shelf { max-width: 26rem; margin: 0 auto 3rem; text-align: center; }
+.shelf ul {
+  list-style: none; margin: 0; padding: 0 0.75rem;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.25rem, 1.5vw, 0.75rem); align-items: end;
+  position: relative; z-index: 1;
+}
+.shelf img { display: block; width: 100%; height: auto; margin-bottom: -3px; }
+.shelf .ledge {
+  height: 14px; border-radius: 4px; background: var(--ochre);
+  box-shadow: inset 0 -5px 0 #b38d55, 0 6px 10px var(--icon-shadow);
+}
+.shelf p { color: var(--muted); font-size: 0.95rem; margin: 0.9rem 0 0; }
+.shelf .ledge + ul { margin-top: 1.25rem; }
+
+.story {
+  max-width: 38rem; margin: 0 auto 3rem; padding: 2rem 2rem 1.25rem;
+  background: var(--card); border: 1px solid var(--rule); border-radius: 1.5rem;
+}
+h2 { font: 600 1.6rem/1.25 "Fraunces", Georgia, "Times New Roman", serif; margin: 0 0 0.75rem; }
+p { margin: 0 0 1rem; }
+
+.features {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem; max-width: 52rem; margin: 0 auto 3rem; padding: 0; list-style: none;
+}
+.features li { background: var(--card); border: 1px solid var(--rule); border-radius: 1.25rem; padding: 1.25rem 1.4rem; }
+.features strong { display: block; font-size: 1.05rem; margin-bottom: 0.2rem; }
+.features span { color: var(--muted); font-size: 0.95rem; }
+
+/* The ochre ribbon of the album, lent to the privacy card. */
+.privacy {
+  max-width: 38rem; margin: 0 auto 2rem; text-align: center;
+  padding: 2rem 2rem 1rem;
+  background: var(--card); border: 1px solid var(--ochre); border-radius: 1.5rem;
+}
+.privacy p { color: var(--muted); }
+
+footer {
+  max-width: 38rem; margin: 3rem auto 0; padding-top: 1.5rem;
+  border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9rem; text-align: center;
+}
+:focus-visible { outline: 2px solid var(--fg); outline-offset: 4px; }
+
+/* Support and privacy pages */
+main.doc { max-width: 42rem; }
+.doc h1 { font-size: clamp(2rem, 5.5vw, 2.6rem); margin: 0 0 0.5rem; }
+.doc h2 {
+  font-family: inherit; font-size: 0.78rem; font-weight: 700; line-height: 1.6;
+  text-transform: uppercase; letter-spacing: 0.09em;
+  color: var(--muted); margin: 2.75rem 0 0.9rem;
+}
+.doc h3 { font: 600 1.15rem/1.3 "Fraunces", Georgia, "Times New Roman", serif; margin: 1.9rem 0 0.4rem; }
+.doc ul, .doc ol { margin: 0 0 1rem; padding-left: 1.2rem; }
+.doc li { margin: 0.35rem 0; }
+.doc .updated { color: var(--muted); margin: 0 0 2.5rem; }
+.doc .lede { font-size: 1.1rem; }
+.doc footer { max-width: none; margin-top: 3.5rem; text-align: left; }
+.contact {
+  margin: 0 0 1rem; padding: 1.5rem 1.6rem;
+  background: var(--card); border: 1px solid var(--rule); border-radius: 1.25rem;
+}
+.contact p:last-child { margin-bottom: 0; }
